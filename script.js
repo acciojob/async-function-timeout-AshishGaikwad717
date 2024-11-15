@@ -26,7 +26,7 @@ const handleFormSubmit = async () => {
     outputDiv.textContent = "Please enter a valid positive delay.";
     return;
   }
-
+	outputDiv.textContent = "";
   // Display loading message
   outputDiv.textContent = "Loading...";
 
