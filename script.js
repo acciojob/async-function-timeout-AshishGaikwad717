@@ -30,10 +30,11 @@ const handleFormSubmit = async () => {
   outputDiv.textContent = "Loading...";
 
   // Wait for the specified delay
-  await delay(delayMs);
+  
 
   // Clear output and display the text after the delay
   outputDiv.textContent = ""; // Ensure output is cleared before displaying final text
+	await delay(delayMs);
   outputDiv.textContent = text;
 };
 
