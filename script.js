@@ -1,10 +1,9 @@
-//your JS code here. If required.
 // Select necessary elements
 const textInput = document.getElementById("text");
 const delayInput = document.getElementById("delay");
 const submitButton = document.getElementById("btn");
 const outputDiv = document.getElementById("output");
-outputDiv.textContent = "";
+
 // Function to simulate a delay
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -26,14 +25,15 @@ const handleFormSubmit = async () => {
     outputDiv.textContent = "Please enter a valid positive delay.";
     return;
   }
-	outputDiv.textContent = "";
+
   // Display loading message
   outputDiv.textContent = "Loading...";
 
   // Wait for the specified delay
   await delay(delayMs);
 
-  // Display the text after the delay
+  // Clear output and display the text after the delay
+  outputDiv.textContent = ""; // Ensure output is cleared before displaying final text
   outputDiv.textContent = text;
 };
 
