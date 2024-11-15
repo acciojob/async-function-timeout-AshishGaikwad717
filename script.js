@@ -4,7 +4,7 @@ const textInput = document.getElementById("text");
 const delayInput = document.getElementById("delay");
 const submitButton = document.getElementById("btn");
 const outputDiv = document.getElementById("output");
-
+outputDiv.textContent = "";
 // Function to simulate a delay
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
